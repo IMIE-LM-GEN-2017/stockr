@@ -132,7 +132,7 @@ apache:
     vhosts:
         av_qv343r9pojsx:
             servername: stockr.dev
-            docroot: /var/www/public
+            docroot: /var/www/html/public
             port: '443'
             setenv:
                 - 'APP_ENV dev'
@@ -148,7 +148,7 @@ apache:
             ssl_cipher: ''
             directories:
                 avd_9vo2uvh8qir2:
-                    path: /var/www/public
+                    path: /var/www/html/public
                     options:
                         - Indexes
                         - FollowSymlinks
