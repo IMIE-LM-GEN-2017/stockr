@@ -31,7 +31,7 @@ vagrantfile:
                                 vflmnfp_78kqhd9jpvg5:
                                     host: '8000'
                                     guest: '80'
-                        memory: '2048'
+                        memory: '512'
                         cpus: '1'
         provision:
             puppet:
@@ -132,7 +132,7 @@ apache:
     vhosts:
         av_qv343r9pojsx:
             servername: stockr.dev
-            docroot: /var/www/html
+            docroot: /var/www/public
             port: '443'
             setenv:
                 - 'APP_ENV dev'
@@ -148,7 +148,7 @@ apache:
             ssl_cipher: ''
             directories:
                 avd_9vo2uvh8qir2:
-                    path: /var/www/html
+                    path: /var/www/public
                     options:
                         - Indexes
                         - FollowSymlinks
