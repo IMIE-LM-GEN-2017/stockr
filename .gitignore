@@ -1,0 +1,10 @@
+# Virtual machine
+/.vagrant/
+/puphpet/config-custom.yaml
+/puphpet/files/dot/ssh/
+
+# temp/backup files
+.bak
+
+# Ide configs:
+.idea/
