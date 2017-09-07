@@ -10,7 +10,20 @@
                     <div class="panel-body">
                         <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                             {{ csrf_field() }}
+                            <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
+                                <label for="username" class="col-md-4 control-label">Pseudo</label>
 
+                                <div class="col-md-6">
+                                    <input id="username" type="text" class="form-control" name="username"
+                                           value="{{ old('username') }}" required autofocus>
+
+                                    @if ($errors->has('first_name'))
+                                        <span class="help-block">
+                                        <strong>{{ $errors->first('first_name') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
                             <div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }}">
                                 <label for="first_name" class="col-md-4 control-label">Nom</label>
 
@@ -82,7 +95,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="password-confirm" class="col-md-4 control-label">Confirmer mot de passe</label>
+                                <label for="password-confirm" class="col-md-4 control-label">Confirmer mot de
+                                    passe</label>
 
                                 <div class="col-md-6">
                                     <input id="password-confirm" type="password" class="form-control"
