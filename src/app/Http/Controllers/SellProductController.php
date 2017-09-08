@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use app\SellProduct;
+use App\SellProduct;
 
 class SellProductController extends Controller
 {

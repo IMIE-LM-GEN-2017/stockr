@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use app\Supplier;
+use App\Supplier;
 
 class SupplierController extends Controller
 {
