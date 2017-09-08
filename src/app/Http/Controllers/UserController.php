@@ -9,14 +9,14 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-        return view('users.index', ['user' => $users]);
+        return view('users.index', ['users' => $users]);
     }
 
     public function show($id)
     {
-        $users = User::findOrFail($id);
+        $user = User::findOrFail($id);
 
-        return view('users.show', ['users' => $users]);
+        return view('users.show', ['users' => $user]);
 
     }
 }
