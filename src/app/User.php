@@ -27,3 +27,9 @@ class User extends Authenticatable
     ];
 }
 
+public function user(){
+    return $this->hasmany('App\User');
+}
+public function SellProduct(){
+    return $this->hasmany('App\SellProduct');
+}

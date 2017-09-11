@@ -9,3 +9,8 @@ class Category extends Model
     protected $fillable = ['name', 'description'
     ];
 }
+
+}
+public function Product(){
+    return $this->OnetoOne('App\Product');
+}

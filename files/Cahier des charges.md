@@ -44,4 +44,4 @@
 
 ### Menu des genres de stockages
 
-> Un menu sera mit en place pour répertorier les genres présents dans le stockage. Ainsi les recherches seront facilitées.
+> Un menu sera mis en place pour répertorier les genres présents dans le stockage. Ainsi les recherches seront facilitées.
