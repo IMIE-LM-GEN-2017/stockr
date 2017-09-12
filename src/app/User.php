@@ -25,11 +25,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-}
 
-public function user(){
-    return $this->hasmany('App\User');
-}
-public function SellProduct(){
-    return $this->hasmany('App\SellProduct');
+    public function user()
+    {
+        return $this->hasmany('App\User');
+    }
+
+    public function SellProduct()
+    {
+        return $this->hasmany('App\SellProduct');
+    }
 }

@@ -8,12 +8,13 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\UserProduct;
 
 class UserProductController
 {
     public function index()
     {
-        $userproducts = User::all();
+        $userproducts = UserProduct::all();
         return view('admin.userproduct.index', ['users' => $userproducts]);
     }
 
@@ -25,7 +26,7 @@ class UserProductController
      */
     public function show($id)
     {
-        $userproduct = User::findOrFail($id);
+        $userproduct = UserProduct::findOrFail($id);
 
         return view('admin.userprod.show', ['userproduct' => $userproduct]);
 
@@ -39,7 +40,7 @@ class UserProductController
      */
     public function edit($id)
     {
-        $userproduct = User::findOrFail($id);
+        $userproduct = UserProduct::findOrFail($id);
 
         return view('admin.userproduct.edit', ['userproduct' => $userproduct]);
     }
@@ -76,7 +77,7 @@ class UserProductController
      */
     public function destroy($id)
     {
-        $userproduct = Userproduct::findOrFail($id);
+        $userproduct = UserProduct::findOrFail($id);
         $userproduct->delete();
 
         Session::flash('message', 'bien supprimé');

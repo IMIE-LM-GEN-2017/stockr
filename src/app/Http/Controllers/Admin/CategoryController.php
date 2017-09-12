@@ -8,6 +8,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Category;
 
 class CategoryController
 {

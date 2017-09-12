@@ -8,7 +8,9 @@ class SellProduct extends Model
 {
     protected $fillable = ['ref', 'supplier_id'
     ];
-}
-public function Product(){
-    return $this->OnetoOne('App\Product');
+
+    public function Product()
+    {
+        return $this->OnetoOne('App\Product');
+    }
 }
