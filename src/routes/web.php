@@ -52,7 +52,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/category/{id}/update', 'Admin\CategoryController@update')->name('AdminCatUpdate');
     Route::get('/category/{id}/destroy', 'Admin\CategoryController@destroy')->name('AdminCatDestroy');
 
-    Route::get('/product', 'Admin\ProductController@index')->name('AdminProdIndex');
+    Route::get('/products', 'Admin\ProductController@index')->name('AdminProdIndex');
     Route::get('/product/create', 'Admin\ProductController@create')->name('AdminProdCreate');
     Route::post('/product/store', 'Admin\ProductController@store')->name('AdminProdStore');
     Route::get('/product/{id}', 'Admin\ProductController@show')->name('AdminProdShow');
@@ -68,7 +68,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/sellproduct/{id}/update', 'Admin\SellProductController@update')->name('AdminSellProdUpdate');
     Route::get('/sellproduct/{id}/destroy', 'Admin\SellProductController@destroy')->name('AdminSellProdDestroy');
 
-    Route::get('/supplier', 'Admin\SupplierController@index')->name('AdminSuppIndex');
+    Route::get('/suppliers', 'Admin\SupplierController@index')->name('AdminSuppIndex');
     Route::get('/supplier/create', 'Admin\SupplierController@create')->name('AdminSuppCreate');
     Route::post('/supplier/store', 'Admin\SupplierController@store')->name('AdminSuppStore');
     Route::get('/supplier/{id}', 'Admin\SupplierController@show')->name('AdminSuppShow');
