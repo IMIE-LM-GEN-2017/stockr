@@ -6,11 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserProduct extends Model
 {
-    protected $fillable = ['ref', 'quantity', 'user_id', 'product_id'
-    ];
+    protected $fillable = ['ref', 'quantity', 'user_id', 'product_id'];
 
-    public function Product()
+    public function products()
     {
-        return $this->OnetoOne('App\Product');
+        return $this->belongsTo('App\Product');
+    }
+
+    public function users()
+    {
+        return $this->belongsTo('App\User');
     }
 }

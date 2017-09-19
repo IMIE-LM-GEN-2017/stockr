@@ -14,8 +14,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = ['username', 'first_name', 'last_name', 'email', 'phone', 'password'
-    ];
+    protected $fillable = ['username', 'first_name', 'last_name', 'email', 'phone', 'password'];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -23,16 +22,13 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password',
+        'remember_token',
     ];
 
-    public function user()
+    public function products()
     {
-        return $this->hasmany('App\User');
+        return $this->hasManyThrough('App\Product', 'UserProduct');
     }
 
-    public function SellProduct()
-    {
-        return $this->hasmany('App\SellProduct');
-    }
 }

@@ -11,11 +11,16 @@ class Product extends Model
 
     public function user()
     {
-        return $this->hasmany('App\User');
+        return $this->belongsToMany('App\User');
     }
 
-    public function SellProduct()
+    public function category()
     {
-        return $this->hasmany('App\SellProduct');
+        return $this->belongsTo('App\Category');
+    }
+
+    public function suppliers()
+    {
+        return $this->hasManyThrough('App\Supplier', 'App\SupplierProduct');
     }
 }
