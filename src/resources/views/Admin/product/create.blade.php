@@ -1,7 +1,9 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Sophie
- * Date: 12/09/2017
- * Time: 09:21
- */
+@extends('layouts.app')
+
+@section('content')
+    {!! Form::open(['route'=>'AdminCatStore']) !!}
+    {!! Form::text('name') !!}
+    {!! Form::textarea('description') !!}
+    {!! Form::submit('Enregistrer') !!}
+    {!! Form::close() !!}
+@endsection
