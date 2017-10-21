@@ -1,7 +1,13 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Sophie
- * Date: 12/09/2017
- * Time: 09:17
- */
+@extends('layouts.app')
+
+@section('title', 'Edition ...')
+
+@section('content')
+    {!! Form::model($user, ['route'=>['AdminUserUpdate', $user->id]]) !!}
+
+    {!! Form::label('email') !!}
+    {!! Form::text('email') !!}
+
+    {!! Form::submit('Enregistrer') !!}
+    {!! Form::close() !!}
+@endsection

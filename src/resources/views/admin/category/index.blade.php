@@ -11,7 +11,7 @@
         <thead>
         <tr>
             <td>Actions</td>
-            <td>id</td>
+            <td>Quantité</td>
             <td>nom</td>
             <td>créer le</td>
             <td>mis à jour le</td>
@@ -25,7 +25,7 @@
                     <a href="{{route('AdminCatEdit', ['id'=>$category->id])}}" class="btn btn-xs btn-primary">Editer</a>
                     <a href="{{route('AdminCatShow', ['id'=>$category->id])}}" class="btn btn-xs btn-primary">Afficher</a>
                 </td>
-                <td>{{$category->id}}</td>
+                <td>{{$category->quantity}}</td>
                 <td>{{$category->name}}</td>
                 <td>{{$category->created_at}}</td>
                 <td>{{$category->updated_at}}</td>

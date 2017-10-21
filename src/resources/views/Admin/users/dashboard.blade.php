@@ -1,7 +1,10 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Sophie
- * Date: 12/09/2017
- * Time: 09:18
- */
+@extends('layouts.app')
+
+@section('title', 'Dashboard')
+
+@section('content')
+    Page de l'utilisateur loggé
+    <pre>
+        {{var_dump(auth()->user())}}
+    </pre>
+@endsection

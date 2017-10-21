@@ -12,8 +12,8 @@ Route::get('/category/{id}', 'CategoryController@show')->name('CatShow');
 Route::get('/product', 'ProductController@index')->name('ProIndex');
 Route::get('/product/{id}', 'ProductController@show')->name('ProShow');
 
-Route::get('/sellproduct', 'SellProductController@index')->name('SellIndex');
-Route::get('/sellproduct/{id}', 'SellProductController@show')->name('SellShow');
+Route::get('/sellProduct', 'SellProductController@index')->name('SellIndex');
+Route::get('/sellProduct/{id}', 'SellProductController@show')->name('SellShow');
 
 Route::get('/supplier', 'SupplierController@index')->name('SuppIndex');
 Route::get('/supplier/{id}', 'SupplierController@show')->name('SuppShow');
@@ -21,8 +21,8 @@ Route::get('/supplier/{id}', 'SupplierController@show')->name('SuppShow');
 Route::get('/users', 'UserController@index')->name('UsersIndex');
 Route::get('/users/{id}', 'UserController@show')->name('UsersShow');
 
-Route::get('/userproduct', 'UserProductController@index')->name('UserproIndex');
-Route::get('/userproduct/{id}', 'UserProductController@show')->name('UserproShow');
+Route::get('/userProduct', 'UserProductController@index')->name('UserproIndex');
+Route::get('/userProduct/{id}', 'UserProductController@show')->name('UserproShow');
 
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/users', 'Admin\UserController@index')->name('AdminUserIndex');
@@ -48,13 +48,13 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/product/{id}/update', 'Admin\ProductController@update')->name('AdminProdUpdate');
     Route::get('/product/{id}/destroy', 'Admin\ProductController@destroy')->name('AdminProdDestroy');
 
-    Route::get('/sellproduct', 'Admin\SellProductController@index')->name('AdminSellProdIndex');
-    Route::get('/sellproduct/create', 'Admin\SellProductController@create')->name('AdminSellProdCreate');
-    Route::post('/sellproduct/store', 'Admin\SellProductController@store')->name('AdminSellProdStore');
-    Route::get('/sellproduct/{id}', 'Admin\SellProductController@show')->name('AdminSellProdShow');
-    Route::get('/sellproduct/{id}/edit', 'Admin\SellProductController@edit')->name('AdminSellProdEdit');
-    Route::post('/sellproduct/{id}/update', 'Admin\SellProductController@update')->name('AdminSellProdUpdate');
-    Route::get('/sellproduct/{id}/destroy', 'Admin\SellProductController@destroy')->name('AdminSellProdDestroy');
+    Route::get('/sellProduct', 'Admin\SellProductController@index')->name('AdminSellProdIndex');
+    Route::get('/sellProduct/create', 'Admin\SellProductController@create')->name('AdminSellProdCreate');
+    Route::post('/sellProduct/store', 'Admin\SellProductController@store')->name('AdminSellProdStore');
+    Route::get('/sellProduct/{id}', 'Admin\SellProductController@show')->name('AdminSellProdShow');
+    Route::get('/sellProduct/{id}/edit', 'Admin\SellProductController@edit')->name('AdminSellProdEdit');
+    Route::post('/sellProduct/{id}/update', 'Admin\SellProductController@update')->name('AdminSellProdUpdate');
+    Route::get('/sellProduct/{id}/destroy', 'Admin\SellProductController@destroy')->name('AdminSellProdDestroy');
 
     Route::get('/suppliers', 'Admin\SupplierController@index')->name('AdminSuppIndex');
     Route::get('/supplier/create', 'Admin\SupplierController@create')->name('AdminSuppCreate');
@@ -64,13 +64,21 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/supplier/{id}/update', 'Admin\SupplierController@update')->name('AdminSuppUpdate');
     Route::get('/supplier/{id}/destroy', 'Admin\SupplierController@destroy')->name('AdminSuppDestroy');
 
-    Route::get('/userproduct', 'Admin\UserproductController@index')->name('AdminUserProdIndex');
-    Route::get('/userproduct/create', 'Admin\UserproductController@create')->name('AdminUserProdCreate');
-    Route::post('/userproduct/store', 'Admin\UserproductController@store')->name('AdminUserProdStore');
-    Route::get('/userproduct/{id}', 'Admin\UserproductController@show')->name('AdminUserProdShow');
-    Route::get('/userproduct/{id}/edit', 'Admin\UserproductController@edit')->name('AdminUserProdEdit');
-    Route::post('/userproduct/{id}/update', 'Admin\UserproductController@update')->name('AdminUserProdUpdate');
-    Route::get('/userproduct/{id}/destroy', 'Admin\UserproductController@destroy')->name('AdminUserProdDestroy');
+    Route::get('/userProduct', 'Admin\UserProductController@index')->name('AdminUserProdIndex');
+    Route::get('/userProduct/create', 'Admin\UserProductController@create')->name('AdminUserProdCreate');
+    Route::post('/userProduct/store', 'Admin\UserProductController@store')->name('AdminUserProdStore');
+    Route::get('/userProduct/{id}', 'Admin\UserProductController@show')->name('AdminUserProdShow');
+    Route::get('/userProduct/{id}/edit', 'Admin\UserProductController@edit')->name('AdminUserProdEdit');
+    Route::post('/userProduct/{id}/update', 'Admin\UserProductController@update')->name('AdminUserProdUpdate');
+    Route::get('/userProduct/{id}/destroy', 'Admin\UserProductController@destroy')->name('AdminUserProdDestroy');
+
+    Route::get('/supplierproduct', 'Admin\SupplierProductController@index')->name('AdminSuppProdIndex');
+    Route::get('/supplierproduct/create', 'Admin\SupplierProductController@create')->name('AdminSuppProdCreate');
+    Route::post('/supplierproduct/store', 'Admin\SupplierProductController@store')->name('AdminSuppProdStore');
+    Route::get('/supplierproduct/{id}', 'Admin\SupplierProductController@show')->name('AdminSuppProdShow');
+    Route::get('/supplierproduct/{id}/edit', 'Admin\SupplierProductController@edit')->name('AdminSuppProdEdit');
+    Route::post('/supplierproduct/{id}/update', 'Admin\SupplierProductController@update')->name('AdminSuppProdUpdate');
+    Route::get('/supplierproduct/{id}/destroy', 'Admin\SupplierProductController@destroy')->name('AdminSuppProdDestroy');
 });
 
 Auth::routes();

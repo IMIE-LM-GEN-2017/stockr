@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Editer une catégorie</h1>
-    <a href="{{route('AdminCatIndex')}}" class="btn btn-primary">Retours à la liste</a>
+    <a href="{{route('AdmiCatIndex')}}" class="btn btn-primary">Retours à la liste</a>
 
     {{--    {!! Form::open(['route'=>'AdminCatStore']) !!}--}}
     <form action="{{route('AdminCatUpdate', ['id'=>$category->id])}}" method="post">
