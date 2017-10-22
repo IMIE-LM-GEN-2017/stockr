@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Nouveau produit</h1>
-    <a href="{{route('ProdIndex')}}" class="btn btn-primary">Retours à la liste</a>
+    <a href="{{route('AdminProdIndex')}}" class="btn btn-primary">Retours à la liste</a>
 
     {{--    {!! Form::open(['route'=>'AdminProdStore']) !!}--}}
     <form action="{{route('AdminProdStore')}}" method="post">

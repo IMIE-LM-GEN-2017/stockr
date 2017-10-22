@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Nouveau produit de l'utilisataur</h1>
+    <h1>Nouveau produit de l'utilisateur</h1>
     <a href="{{route('AdminUserProdIndex')}}" class="btn btn-primary">Retours à la liste</a>
 
     {{--    {!! Form::open(['route'=>'AdminCatStore']) !!}--}}
@@ -18,7 +18,7 @@
                 </div>
             @endif
         </div>
-        <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
+        <div class="form-group.visible-lg{{ $errors->has('description') ? ' has-error' : '' }}">
             <label for="exampleInputPassword1">Description</label>
             <textarea class="form-control" name="description"
                       placeholder="Description">{{ old('description') }}</textarea>

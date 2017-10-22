@@ -2,14 +2,14 @@
 
 @section('content')
     <h1>Editer un nouveau produit de l'utilisateur</h1>
-    <a href="{{route('AdmiUserProdIndex')}}" class="btn btn-primary">Retours à la liste</a>
+    <a href="{{route('AdminUserProdIndex')}}" class="btn btn-primary">Retours à la liste</a>
 
     {{--    {!! Form::open(['route'=>'AdminCatStore']) !!}--}}
     <form action="{{route('AdminUserProdUpdate', ['id'=>$userproduct->id])}}" method="post">
 
         {{csrf_field()}}
 
-        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+        <div class="form-group.visible-lg{{ $errors->has('name') ? ' has-error' : '' }}">
             <label for="name">Nom</label>
             <input id="name" type="text" class="form-control" name="name" placeholder="Nom" value="{{ $userproduct->name }}">
             @if ($errors->has('name'))

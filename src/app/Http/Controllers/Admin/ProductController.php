@@ -10,6 +10,7 @@ namespace App\Http\Controllers\Admin;
 
 
 use App\Product;
+use Illuminate\Support\Facades\Session;
 
 class ProductController
 

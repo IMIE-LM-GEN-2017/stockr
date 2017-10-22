@@ -7,7 +7,7 @@
 
     <a href="{{route('AdminUserProdCreate')}}" class="btn btn-primary">Nouveau produit</a>
 
-    <table class="table">
+    <table class="table.visible-lg">
         <thead>
         <tr>
             <td>Actions</td>

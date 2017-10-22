@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Editer une production</h1>
-    <a href="{{route('AdmiProdIndex')}}" class="btn btn-primary">Retours à la liste</a>
+    <a href="{{route('AdminProdIndex')}}" class="btn btn-primary">Retours à la liste</a>
 
     {{--    {!! Form::open(['route'=>'AdminCatStore']) !!}--}}
     <form action="{{route('AdminProdUpdate', ['id'=>$product->id])}}" method="post">
